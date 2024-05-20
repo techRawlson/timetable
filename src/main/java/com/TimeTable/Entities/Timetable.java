@@ -10,23 +10,21 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 
-@Entity
-@Data
-public class Timetable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String Monday;
-    private String Tuesday;
-    private String Wednesday;
-    private String Thursday;
-    private String Friday;
-    private LocalTime startTime;
-    private LocalTime endTime;
-    private int lectureNumber;
-    private String session;
-    private String className;
-    private String section;
+    @Entity
+    @Data
+    public class Timetable {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
+        private String day;
+        private String teacherName;
+        private String subject;
+        private LocalTime startTime;
+        private LocalTime endTime;
+        private int lectureNumber;
+        private String session;
+        private String className;
+        private String section;
 
-}
+    }
 
